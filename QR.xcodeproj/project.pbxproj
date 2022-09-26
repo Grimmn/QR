@@ -14,6 +14,7 @@
 		86651E6F28E18B9E0045B868 /* QRTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86651E6E28E18B9E0045B868 /* QRTests.swift */; };
 		86651E7928E18B9E0045B868 /* QRUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86651E7828E18B9E0045B868 /* QRUITests.swift */; };
 		86651E7B28E18B9E0045B868 /* QRUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86651E7A28E18B9E0045B868 /* QRUITestsLaunchTests.swift */; };
+		86651E8928E18BAE0045B868 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 86651E8828E18BAE0045B868 /* CodeScanner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86651E8928E18BAE0045B868 /* CodeScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,9 @@
 			dependencies = (
 			);
 			name = QR;
+			packageProductDependencies = (
+				86651E8828E18BAE0045B868 /* CodeScanner */,
+			);
 			productName = QR;
 			productReference = 86651E5A28E18B9E0045B868 /* QR.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +220,9 @@
 				Base,
 			);
 			mainGroup = 86651E5128E18B9E0045B868;
+			packageReferences = (
+				86651E8728E18BAE0045B868 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 86651E5B28E18B9E0045B868 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -420,11 +428,13 @@
 				DEVELOPMENT_TEAM = R4DLJ4P88Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera to scan QR codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,11 +459,13 @@
 				DEVELOPMENT_TEAM = R4DLJ4P88Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need the camera to scan QR codes.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -583,6 +595,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		86651E8728E18BAE0045B868 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		86651E8828E18BAE0045B868 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86651E8728E18BAE0045B868 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 86651E5228E18B9E0045B868 /* Project object */;
 }
